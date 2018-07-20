@@ -11,14 +11,34 @@ const userSchema = mongoose.Schema
     firstName: String,
     lastName:  String,
     userName: String,
-     email:     String,
+     email:   String,
   //  password: {type: String, required:true}
     password: String
   },
   created: {type: Date, default: Date.now}
 });
 
-userSchema.methods.serialize = function() {
+const recipeSchema = mongoose.Schema
+({
+    userName : String,
+    recipeName: String,
+    ingredients :{},
+    rating: String,
+    created: {type: Date, default: Date.now}
+})
+
+recipeSchema.methods.serialize = function()
+{
+  return{
+      userName : this.userName,
+      recipeName: this.recipeName,
+      ingredients : this.ingredients,
+      rating : this.rating
+    }
+}
+
+userSchema.methods.serialize = function()
+{
   return{
        userName : this.user.userName ,
        firstName : this.user.firstName ,
@@ -35,4 +55,7 @@ userSchema.statics.hashPassword = function(password) {
   return bcrypt.hash(password, 10);
 };
 
-module.exports = {users};
+const recipes = mongoose.model('recipes', restaurantSchema);
+const users = mongoose.model('users',userSchema);
+
+module.exports = {recipes,users};

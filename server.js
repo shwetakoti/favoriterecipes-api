@@ -7,6 +7,7 @@ const passport = require('passport');
 const cors = require('cors');
 const {DATABASE_URL, PORT,CLIENT_ORIGIN} = require('./config');
 const {router: authRouter, localStrategy, jwtStrategy } = require('./auth');
+const {router: recipeRouter } = require('./recipes');
 
 const PORT = process.env.port||3000;
 
