@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+services:
+- mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: bfBSuRUVXHok3SfFAb+IGfCR1wZYO3tRl3bMl2dkfsgYtjJfR2vwNYIbY/bX4UD152E5m/h0z3GYu3T4ADXAFRJau/mktRqjusc2/t29ouABjPWxo5WR/uEL3k3B45wCe4Lz/06+I1Wc/2bszl/1whEpZFR9dJ7spVChWtf93Z3jnKeknhr4heJKSPeFhsieDcJXz+jCAxP9WmhZ7e6pHdITzk2WtVKWVMQRTcV2NhMnXxvCagrY/F9J9Te6RGI34qNbs6W3iO2Y28uzkHv7aocedXN0lNyfW1LIwNPlDh/mJKqSwN5g2jXWByMak2XMhFkZSDtpYWXPi5Atq+jMDFXjD1IxN/qykh9WEHnWT5LownjEjUXKgpirl466vhhFoFGKa1YLlAr56VOMJWXyUEeOcRvGUPWwxl7LlHiV1cyVuEki7+ayJVtIMI6Nnr6bMRDGRKTthZha7xWpmha3JGriKVIhalw8e9RZ7GOjYRw/ldChvSjTxOa1BYbNrAfAaZWbXx1AqqrIGEnSUYN28jk3vIAsKeZb6Xp98aaTA54G+X0/umD7MdqIHNo/7pY/nNzZfP1IyKNrRQF3P7tkCGzaBVxAk2GuavQkEv9dc+U0Ir6zZlSvF3564QJmMGJBASUPnoZQ5EiVAYajph2KNOqe1KEJYzu+5F+fLCFzqf0=
+  app: fathomless-dusk-14768
+  on:
+    repo: shwetakoti/favoriterecipes-api
