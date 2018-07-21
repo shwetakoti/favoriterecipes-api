@@ -55,7 +55,7 @@ userSchema.statics.hashPassword = function(password) {
   return bcrypt.hash(password, 10);
 };
 
-const recipes = mongoose.model('recipes', restaurantSchema);
+const recipes = mongoose.model('recipes', recipeSchema);
 const users = mongoose.model('users',userSchema);
 
 module.exports = {recipes,users};

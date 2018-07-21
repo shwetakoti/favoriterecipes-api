@@ -1,11 +1,12 @@
 const express = require('express');
+const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jsonParser = bodyParser.json();
 const passport = require('passport');
 const cors = require('cors');
-const {DATABASE_URL, PORT,CLIENT_ORIGIN} = require('./config');
+const {DATABASE_URL,CLIENT_ORIGIN} = require('./config');
 const {router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 const {router: recipeRouter } = require('./recipes');
 
